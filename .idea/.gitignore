@@ -8,5 +8,9 @@
 /dataSources.local.xml
 # WebStorm / IntelliJ project files
 .idea/
+.idea/workspace.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/*.iml
 *.iml
 out/
