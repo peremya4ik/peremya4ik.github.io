@@ -1,0 +1,36 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+main {
+  margin: auto;
+  max-width: 600px;
+  padding-top: 2rem;
+}
+h1 {
+  font-size: 3rem;
+}
+p{
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  line-height: 1.2;
+}
+canvas {
+  border-radius: 1rem;
+  margin: auto;
+}
+body {
+  background: #ECE6EF;
+}
+
+.footer {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}

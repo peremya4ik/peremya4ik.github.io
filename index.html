@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>p5 Sketch — peremya4ik</title>
+    <title>Desfio de Limpieza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap" rel="stylesheet">
 
-    <!-- p5 core -->
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js" defer></script>
-    <!-- optionally add p5.sound -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/addons/p5.sound.min.js" defer></script> -->
+  </head>
+  <body>
+    <main>
+      <h1>Desafio de Limpieza</h1>
+      <p>La idea de este proyecto es crear un simulacro de limpieza de una estatua real que se encuentra en la sede Las Heras de la UNA. Soy estudiante de restauración, y la limpieza es uno de los procedimientos fundamentales en el mantenimiento de los bienes culturales.
+        Probando distintos métodos —cepillo, vinagre, alcohol y agar-agar— el usuario aprende un principio clave de la restauración: “menos es más”. Es decir, siempre es recomendable comenzar con las herramientas más suaves y menos invasivas, y no al revés.
+        <br> <br>
+        Para ampliar las posibilidades de este programa, se proyecta incorporar simulacros de limpieza de otros materiales (mármol, metal, madera, plástico) y sumar nuevas herramientas (como bisturí) y sustancias de trabajo (tensioactivos, polímeros, entre otros).
+        Las posibilidades de usar este programa con fines didácticos para estudiantes de restauración son prácticamente infinitas.</p>
 
-    <!-- your sketch (deferred so p5 is loaded first) -->
-    <script src="sketch.js" defer></script>
+      <div id="canvas-container"></div>
 
-    <style>
-        /* basic reset so canvas fills viewport */
-        html,body { height:100%; margin:0; }
-        body { display:flex; align-items:center; justify-content:center; background:#111; color:#eee; }
-        canvas { max-width:100%; height:auto; }
-    </style>
-</head>
-<body>
-<!-- p5 will create its canvas automatically via setup() -->
-<noscript>
-    This page requires JavaScript. Please enable JS to run the p5 sketch.
-</noscript>
-</body>
+
+
+      <div class="footer">
+        Aleksandra Valieva, Universidad Nacional de las Artes. 2do cuatrimestre 2025
+      </div>
+
+    </main>
+
+    <script src="sketch.js"></script>
+
+  </body>
 </html>
