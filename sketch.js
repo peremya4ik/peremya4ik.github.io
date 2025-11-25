@@ -177,7 +177,7 @@ function drawCleaning() {
     textSize(13);
     text(message, 180, 420, 320, 50);
 
-    felicidadesAlpha -= 3;
+    felicidadesAlpha -= 0.7;
     if (felicidadesAlpha <= 0) {
       message = "";
       felicidadesAlpha = 255;
