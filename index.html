@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/addons/p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -9,24 +10,108 @@
     <title>Desafío de Limpieza</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/a82e22ff046b9d54cee7613d9bc1a2a5?family=GillSans-Medium" rel="stylesheet" type="text/css"/>
   </head>
   <body>
+  <div class="header">
+    <a class="active" href="#inicio">inicio</a>
+    <a href="#proceso">proceso</a>
+    <a href="#proyecto">proyecto</a>
+    <a href="#proximamente">proximamente</a>
+  </div>
     <main>
-      <h1>Desafío de Limpieza</h1>
-      <p>La idea de este proyecto es crear un simulacro de limpieza de una estatua real que se encuentra en la sede Las Heras de la UNA. Soy estudiante de restauración, y la limpieza es uno de los procedimientos fundamentales en el mantenimiento de los bienes culturales.
-        Probando distintos métodos —cepillo, vinagre, alcohol y agar-agar— el usuario aprende un principio clave de la restauración: “menos es más”. Es decir, siempre es recomendable comenzar con las herramientas más suaves y menos invasivas, y no al revés.
-        <br> <br>
-        Para ampliar las posibilidades de este programa, se proyecta incorporar simulacros de limpieza de otros materiales (mármol, metal, madera, plástico) y sumar nuevas herramientas (como bisturí) y sustancias de trabajo (tensioactivos, polímeros, entre otros).
-        Las posibilidades de usar este programa con fines didácticos para estudiantes de restauración son prácticamente infinitas.</p>
+
+
+      <p id="inicio" class="inicio">
+        Bienvenidos a la página web del proyecto “Desafío de Limpieza”, desarrollado por Aleksandra Valieva en el marco de la cursada OTAV Digitalización de Imágenes I, cátedra Alvarez Olmedo, en la Universidad Nacional de las Artes durante el segundo cuatrimestre de 2025.
+        <br><br>
+        Este proyecto propone un simulacro interactivo de limpieza basado en una estatua real ubicada en la sede Las Heras de la UNA. Como estudiante de restauración, mi intención es acercar al público uno de los procedimientos fundamentales en la conservación de bienes culturales: la limpieza.
+        <br><br>
+        A través de la experimentación con distintas herramientas, el usuario descubre un principio clave de este proceso:
+        siempre es recomendable comenzar con los métodos más suaves y menos invasivos antes de avanzar hacia opciones más potentes.
+      </p>
+
+      <div class="proceso" id="proceso">
+
+        <p >
+          La preparación del proyecto incluyó la creación de un moodboard con diversas opciones de estatuas y fondos, la selección de herramientas y sustancias de limpieza, y la planificación de distintas combinaciones entre ellas.
+          <br><br>
+          Uno de los principales desafíos fue diseñar y programar en p5.js todas las combinaciones posibles entre los métodos de limpieza, buscando reflejar situaciones de la vida real. Por ejemplo, no tiene sentido utilizar el cepillo sobre una estatua de yeso previamente tratada con alcohol.
+          <br><br>
+          Otra dificultad consistió en visualizar el desgaste y las suciedades dentro del programa. Para esta primera etapa —el prototipo— se decidió utilizar la función tint() como solución sencilla y eficaz para simular diferentes niveles de limpieza.
+
+        </p>
+
+        <br>
+        <br>
+        <div class="images">
+          <div class="image">
+            <span class="image_span">Moodboard del proyecto:</span>
+            <img loading="lazy" src="/image_1.jpeg" alt="">
+          </div>
+          <br><br>
+          <div class="image">
+            <span class="image_span">Desarrollo del proyecto, versiones anteriores:</span>
+
+
+              <img loading="lazy" src="/image_2.jpeg" alt="">
+              <img loading="lazy" class="narrow_image" src="/image_3.jpeg" alt="">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="proyecto" id="proyecto">
+        <p>
+          En esta sección se puede interactuar con el simulador de limpieza desarrollado en p5.js. El objetivo es encontrar la combinación correcta de herramientas para limpiar la estatua de manera segura y eficaz.
+          <br><br>
+          El programa ofrece cuatro opciones: cepillo, vinagre, agar-agar y alcohol. Cada una produce un efecto diferente según el orden en que se utilice.
+          La lógica del simulador sigue un principio fundamental de la restauración real:
+          empezar siempre con los métodos más suaves y aumentar gradualmente la intensidad, evitando dañar la obra.
+          <br>br
+          Si el usuario elige un material inadecuado (como el alcohol o el vinagre en ciertas etapas), la estatua se oscurece o muestra señales de deterioro, y será necesario reiniciar.
+          <br><br>
+          Si, en cambio, se utiliza el cepillo primero y luego se aplica el agar-agar, se consigue la limpieza correcta y la estatua es "invitada" al Louvre, donde aparece en un nuevo escenario acompañado de música.
+          <br><br>
+
+        </p>
+      </div>
 
       <div id="canvas-container"></div>
+
+      <p style="text-align: center">Link al sketch en p5 <a style="color: blue; text-decoration: underline" href="https://editor.p5js.org/Alval/full/KDTkvpxpG" target="_blank">https://editor.p5js.org/Alval/full/KDTkvpxpG</a>
+        </p>
+
+      <div class="proximamente" id="proximamente">
+        <p>
+          Para futuras versiones del proyecto, existe un gran potencial de expansión. Una posibilidad es incorporar nuevas condiciones de trabajo, como limpiar esculturas ubicadas en interiores o expuestas permanentemente al exterior, cada una con necesidades y desafíos propios.
+          <br><br>
+          También se podrían sumar estatuas de distintos materiales —mármol, piedra, madera, plástico, metal u otros materiales no convencionales—, lo que abriría paso a herramientas y procedimientos específicos. Entre las opciones a integrar se encuentran más sustancias tensioactivas, goma moldeable, hidrocarburos, y otros materiales utilizados en la restauración profesional.
+          <br><br>
+          Asimismo, sería posible añadir nuevas patologías que requieren tratamientos especializados: no solo polvo o suciedad superficial, sino también biopelículas, costras blancas o negras, sales, hongos, musgos y diversos tipos de deterioro.
+          <br><br>
+          Las combinaciones y escenarios posibles son prácticamente ilimitados, permitiendo transformar este simulador en una herramienta educativa cada vez más completa y realista.
+          <br><br>
+          Opciones de patologías para agregar al proyecto vistas recientemente en el Cementerio de la Recoleta:
+          <br>
+        </p>
+
+        <div class="images_2">
+          <img src="image_4.JPG" alt="">
+          <img src="image_5.JPG" alt="">
+          <img src="image_6.JPG" alt="">
+          <img src="image_7.JPG" alt="">
+
+        </div>
+      </div>
 
 
 
       <div class="footer">
-        Aleksandra Valieva, Universidad Nacional de las Artes. 2do cuatrimestre 2025
+        Universidad Nacional de las Artes. Ciudad Autónoma de Buenos Aires, 2025
       </div>
 
     </main>
@@ -35,3 +120,45 @@
 
   </body>
 </html>
+
+<script>
+  // Smooth scrolling when clicking nav links
+  document.querySelectorAll('.header a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const target = document.querySelector(this.getAttribute('href'));
+      if (!target) return;
+
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+
+      // Immediately update active state
+      document.querySelectorAll('.header a').forEach(a => a.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  // Scroll-based active link highlighting
+  const sections = document.querySelectorAll('[id]');
+  const options = {
+    threshold: 0.1,
+    rootMargin: "-20% 0px -20% 0px"   // middle 60% of viewport = active zone
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute('id');
+      const link = document.querySelector(`.header a[href="#${id}"]`);
+
+      if (entry.isIntersecting && link) {
+        document.querySelectorAll('.header a').forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  }, options);
+
+  sections.forEach(sec => observer.observe(sec));
+</script>
